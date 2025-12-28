@@ -3,7 +3,7 @@
 }
 
 locals {
-  bucket_name = "-tfstate-"
+  bucket_name = "aws-platform-ecs-ref-tfstate-${random_id.suffix.hex}"
 }
 
 resource "aws_kms_key" "tf_state" {
